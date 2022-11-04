@@ -1,0 +1,37 @@
+pipeline:
+  name: test2
+  identifier: test2
+  template:
+    templateRef: Pipeline_template
+    versionLabel: "1"
+    templateInputs:
+      stages:
+        - stage:
+            identifier: deploy
+            type: Deployment
+            spec:
+              service:
+                serviceRef: <+input>
+                serviceInputs: <+input>
+              environment:
+                environmentRef: <+input>
+                environmentInputs: <+input>
+                serviceOverrideInputs: <+input>
+                infrastructureDefinitions: <+input>
+        - stage:
+            identifier: test3
+            template:
+              templateInputs:
+                type: Deployment
+                spec:
+                  service:
+                    serviceRef: <+input>
+                    serviceInputs: <+input>
+                  environment:
+                    environmentRef: <+input>
+                    environmentInputs: <+input>
+                    serviceOverrideInputs: <+input>
+                    infrastructureDefinitions: <+input>
+  tags: {}
+  projectIdentifier: CSETest1
+  orgIdentifier: AbhiOrg
