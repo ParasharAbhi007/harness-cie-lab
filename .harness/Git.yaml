@@ -6,7 +6,7 @@ pipeline:
   tags: {}
   stages:
     - stage:
-        name: shell
+        name: shell lijo
         identifier: shell
         description: ""
         type: Custom
