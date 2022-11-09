@@ -1,0 +1,30 @@
+pipeline:
+  name: Git
+  identifier: Git
+  projectIdentifier: Git_Exp
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: shell
+        identifier: shell
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  type: ShellScript
+                  name: shell
+                  identifier: shell
+                  spec:
+                    shell: Bash
+                    onDelegate: true
+                    source:
+                      type: Inline
+                      spec:
+                        script: echo "Lord Lijo"
+                    environmentVariables: []
+                    outputVariables: []
+                  timeout: 10m
+        tags: {}
