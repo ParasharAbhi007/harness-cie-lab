@@ -28,3 +28,9 @@ pipeline:
                     outputVariables: []
                   timeout: 10m
         tags: {}
+    - stage:
+        name: shelltemp
+        identifier: shelltemp
+        template:
+          templateRef: stagetemp2
+          versionLabel: "2.0"
