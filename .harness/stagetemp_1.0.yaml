@@ -1,0 +1,27 @@
+template:
+  name: stagetemp
+  identifier: stagetemp
+  versionLabel: "1.0"
+  type: Stage
+  projectIdentifier: Git_Exp
+  orgIdentifier: default
+  tags: {}
+  spec:
+    type: Custom
+    spec:
+      execution:
+        steps:
+          - step:
+              type: ShellScript
+              name: shell
+              identifier: shell
+              spec:
+                shell: Bash
+                onDelegate: true
+                source:
+                  type: Inline
+                  spec:
+                    script: echo "hello"
+                environmentVariables: []
+                outputVariables: []
+              timeout: 10m
