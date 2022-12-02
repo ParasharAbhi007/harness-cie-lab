@@ -23,7 +23,9 @@ pipeline:
                     source:
                       type: Inline
                       spec:
-                        script: echo "Lord Lijo"
+                        script: |-
+                          echo "Lord Lijo"
+                          Lijo
                     environmentVariables: []
                     outputVariables: []
                   timeout: 10m
