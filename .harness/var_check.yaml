@@ -1,0 +1,15 @@
+inputSet:
+  identifier: "var_check"
+  pipeline:
+    identifier: "Git"
+    stages:
+    - stage:
+        identifier: "shell"
+        type: "Custom"
+        variables:
+        - name: "test"
+          type: "String"
+          value: "check"
+  name: "var check"
+  orgIdentifier: "default"
+  projectIdentifier: "Git_Exp"
