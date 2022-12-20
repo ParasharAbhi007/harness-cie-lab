@@ -41,3 +41,9 @@ pipeline:
         template:
           templateRef: stagetemp2
           versionLabel: "2.0"
+    - stage:
+        name: sample
+        identifier: sample
+        template:
+          templateRef: stagetemp
+          versionLabel: "1.0"
