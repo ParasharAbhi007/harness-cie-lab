@@ -28,7 +28,7 @@ pipeline:
                     connectorRef: account.harnessImage
                     image: docker
                     shell: Sh
-                    command: echo <+codebase.commitSha>
+                    command: <+<+codebase.repoUrl>.split(".com/")[1]>>
           infrastructure:
             type: KubernetesDirect
             spec:
@@ -37,20 +37,3 @@ pipeline:
               automountServiceAccountToken: true
               nodeSelector: {}
               os: Linux
-    - stage:
-        name: rest
-        identifier: rest
-        template:
-          templateRef: account.newtest2
-          versionLabel: "1"
-          templateInputs:
-            type: Deployment
-            spec:
-              environment:
-                environmentRef: <+input>
-                environmentInputs: <+input>
-                serviceOverrideInputs: <+input>
-                infrastructureDefinitions: <+input>
-              service:
-                serviceRef: <+input>
-                serviceInputs: <+input>
