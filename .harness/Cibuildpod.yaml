@@ -32,7 +32,7 @@ pipeline:
           infrastructure:
             type: KubernetesDirect
             spec:
-              connectorRef: account.kube
+              connectorRef: account.k8s
               namespace: abhinandan
               automountServiceAccountToken: true
               nodeSelector: {}
